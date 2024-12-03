@@ -3,14 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Rate Movie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- Adding Montserrat font -->
+    <style>
+        /* Reset de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Fond sombre comme sur l'accueil */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1a1a1a; /* Fond sombre du header */
+            color: white;
+            padding: 20px 40px; /* Plus d'espace pour un header agrandi */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 100px; /* Taille agrandie du logo */
+            width: auto; /* Conserve les proportions */
+        }
+
+        header .site-name {
+            font-family: 'Montserrat', sans-serif; /* New font */
+            font-size: 3rem; /* Larger size */
+            font-weight: 700; /* Bold style */
+            color: #ebebeb; /* Gold color for emphasis */
+        }
+
+        header nav {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem; /* Police légèrement agrandie */
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #f39c12; /* Effet survol */
+        }
+
+        .container {
+            background: #1e1e1e; /* Fond similaire au site */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 300px;
+            margin-top: 150px; /* Ajustement pour header fixe */
+        }
+
+        h2 {
+            color: #f39c12; /* Couleur de titre similaire */
+        }
+
+        .rating {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .rating > input {
+            display: none;
+        }
+
+        .rating > label {
+            font-size: 2rem;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .rating > input:checked ~ label {
+            color: #f7cc0f;
+        }
+
+        .rating > label:hover,
+        .rating > label:hover ~ label {
+            color: #f1c40f;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        #ratingMessage {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
 </head>
 <body>
-  
-    
-    
+    <header>
+        <img src="images/kklog.png" alt="Logo">
+        <div class="site-name">WatchWiser</div> <!-- New name with larger font -->
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="recommendations.html">Recommendations</a>
+            <a href="rate.html">Rate a Movie</a>
+        </nav>
+    </header>
+
     <div class="container">
         <h2>Rate Movie</h2>
 
@@ -34,72 +161,6 @@
 
         <div id="ratingMessage" style="display:none; margin-top: 20px;"></div> <!-- Feedback Message -->
     </div>
-
-    <style>
-        /* Add your custom CSS here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-        }
-
-        .rating {
-            direction: rtl;
-            unicode-bidi: bidi-override;
-        }
-
-        .rating > input {
-            display: none;
-        }
-
-        .rating > label {
-            font-size: 2rem;
-            color: #ccc;
-            cursor: pointer;
-        }
-
-        .rating > input:checked ~ label {
-            color: #f39c12;
-        }
-
-        .rating > label:hover,
-        .rating > label:hover ~ label {
-            color: #f1c40f;
-        }
-
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-        }
-
-        #ratingMessage {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #27ae60;
-        }
-    </style>
 
     <script>
         // Fetch the saved rating from localStorage when the page loads
