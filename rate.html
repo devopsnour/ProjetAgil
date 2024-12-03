@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Rate Movie</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> <!-- Adding Montserrat font -->
     <style>
@@ -138,6 +139,16 @@
         </nav>
     </header>
 
+=======
+    <link rel="stylesheet" href="style.css">
+    <title>Rate Movie</title>
+
+</head>
+<body>
+  
+    
+    
+>>>>>>> 2344fa45174744b5fd8bae256973e6b1ac5cb051
     <div class="container">
         <h2>Rate Movie</h2>
 
@@ -162,6 +173,75 @@
         <div id="ratingMessage" style="display:none; margin-top: 20px;"></div> <!-- Feedback Message -->
     </div>
 
+<<<<<<< HEAD
+=======
+    <style>
+        /* Add your custom CSS here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .rating {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        .rating > input {
+            display: none;
+        }
+
+        .rating > label {
+            font-size: 2rem;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating > input:checked ~ label {
+            color: #f39c12;
+        }
+
+        .rating > label:hover,
+        .rating > label:hover ~ label {
+            color: #f1c40f;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #ratingMessage {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+
+>>>>>>> 2344fa45174744b5fd8bae256973e6b1ac5cb051
     <script>
         // Fetch the saved rating from localStorage when the page loads
         window.onload = function() {
@@ -192,4 +272,8 @@
         });
     </script>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 2344fa45174744b5fd8bae256973e6b1ac5cb051
